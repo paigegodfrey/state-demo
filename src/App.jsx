@@ -2,7 +2,8 @@
 import ListItem from "./components/ListItem/ListItem";
 import "./App.css";
 
-export const defaultItems = [
+// dummy data
+export const foodData = [
   {
     "food": "apple",
     "quantity": 6
@@ -22,7 +23,7 @@ function App() {
     <div className="App">
       <h1 className="title">Shopping List</h1>
 
-      {defaultItems?.map((item, idx) =>
+      {foodData?.map((item, idx) =>
         <ListItem
           food={item.food}
           quantity={item.quantity}
