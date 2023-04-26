@@ -1,16 +1,15 @@
-/* eslint-disable react/prop-types */
-import { useState } from 'react';
+import { useState } from "react";
 import "./ListItem.css";
 
-function ListItem({ food }) {
-  const [quantity, setQuantity] = useState(0);
+function ListItem({ food, initialQuantity = 1 }) {
+  const [quantity, setQuantity] = useState(initialQuantity);
 
   function increment() {
     setQuantity(count => count + 1);
   }
 
   function decrement() {
-    setQuantity(count => count + 1);
+    setQuantity(count => count - 1);
   }
 
   return (

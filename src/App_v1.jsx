@@ -1,4 +1,4 @@
-import ListItemDumb from "./components/ListItemDumb/ListItemDumb";
+import ListItem from "./components/ListItem/ListItem";
 import "./App.css";
 
 export const foodData = [
@@ -22,9 +22,9 @@ function App() {
       <h1 className="title">Shopping List</h1>
       <div>
         {foodData?.map((item, idx) =>
-          <ListItemDumb
+          <ListItem
             food={item.food}
-            quantity={item.quantity}
+            initialQuantity={item.quantity}
             key={idx} />
         )}
       </div>
